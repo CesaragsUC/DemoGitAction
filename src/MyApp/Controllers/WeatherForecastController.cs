@@ -29,5 +29,11 @@ namespace MyApp.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet(Name = "Temperatura")]
+        public async Task<IActionResult> Temperatura()
+        {
+            return Ok("Atualizado");
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyApp.Model;
 
 namespace MyApp.Controllers
 {
@@ -10,7 +11,8 @@ namespace MyApp.Controllers
         [HttpGet(Name = "Clientes")]
         public async Task<IActionResult> Index()
         {
-            return Ok("Bem vindo");
+            var clientes = Cliente.ListaClientesFake();
+            return Ok(clientes);
         }
     }
 }
